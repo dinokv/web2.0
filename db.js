@@ -1,6 +1,6 @@
 var mysql = require('mysql');
 var db_config = {
-  host : '127.0.0.1';
+  host : '127.0.0.1',
   user : 'root',
   password : '679667',
   database : 'webapp'
@@ -9,7 +9,7 @@ var db_config = {
 var connection;
 
 function handleDisconnect(){
-  connection = mysql.creatConnection(db_config);
+  connection = mysql.createConnection(db_config);
   connection.connect(function(err){
     if(err){
       console.log('error when connecting to db :', err);
@@ -27,4 +27,4 @@ function handleDisconnect(){
 
 handleDisconnect();
 
-modul.exports = connection;
+module.exports = connection;
